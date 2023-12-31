@@ -1,0 +1,87 @@
+* {
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  user-select: none;
+  transition: all 0.5s;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  flex-direction: column;
+  /* background-color: rgb(233, 233, 233); */
+}
+
+.month {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  width: 60vw;
+  height: 70vh;
+  /* border: 1px solid black; */
+  animation: opacity 1s;
+}
+
+h3 {
+  text-align: center;
+  margin: 10px;
+  animation: opacity 1s;
+}
+
+h1 {
+  margin-left: 40px;
+  /* border-bottom: 1px solid black; */
+  font-weight: 600;
+}
+
+h2 {
+  position: absolute;
+  margin: 10px;
+}
+
+.lastMonth {
+  bottom: 0px;
+  left: 0px;
+}
+
+.nextMonth {
+  bottom: 0px;
+  right: 0px;
+}
+
+h2:hover {
+  color: blue;
+  transform: translateY(-10px);
+  cursor: none;
+}
+
+h3:hover {
+  font-weight: 600;
+  transform: scale(1.5);
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: orangered;
+  margin-left: 30px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
